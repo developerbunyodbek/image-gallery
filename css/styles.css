@@ -1,0 +1,80 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 95vw;
+}
+
+.panel:nth-child(1) {
+  background-image: url("../images/messi.jpg");
+}
+
+.panel:nth-child(2) {
+  background-image: url("../images/ronaldo.jpg");
+}
+
+.panel:nth-child(3) {
+  background-image: url("../images/neymar.jpg");
+}
+
+.panel:nth-child(4) {
+  background-image: url("../images/dybala.jpg");
+}
+
+.panel:nth-child(5) {
+  background-image: url("../images/shomurodov.jpg");
+}
+
+.panel {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  border-radius: 5px;
+  margin: 10px;
+  color: #fff;
+  flex: 0.5;
+  position: relative;
+  cursor: pointer;
+  transition: all 1s ease-in;
+}
+
+.panel-title {
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 24px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active .panel-title {
+  opacity: 1;
+  transition: opacity 0.7s ease-in 0.4s;
+}
